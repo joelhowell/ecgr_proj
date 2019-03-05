@@ -21,7 +21,7 @@ if "%msg%"=="" goto e
 git commit -m %msg%
 call :colorEcho 40 "[Processing...]"
 echo.
-git push
+git push -q
 call :colorEcho a0 "[Push Complete]"
 echo.
 ping 127.0.0.1 -n 2 > nul
