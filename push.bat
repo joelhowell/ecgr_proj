@@ -4,7 +4,7 @@ setlocal EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
   set "del=%%a"
 )
-call :colorEcho b0 "[Git Status]"
+call :colorEcho c0 "[Git Status]"
 echo.
 
 git status
