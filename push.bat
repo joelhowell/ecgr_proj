@@ -19,10 +19,10 @@ set /p msg="Commit Message: "
 echo.
 if "%msg%"=="" goto e
 git commit -m %msg%
-call :colorEcho c0 "[Processing...]"
+call :colorEcho 40 "[Processing...]"
 echo.
 git push
-call :colorEcho 40 "[Push Complete]"
+call :colorEcho a0 "[Push Complete]"
 echo.
 ping 127.0.0.1 -n 2 > nul
 exit
