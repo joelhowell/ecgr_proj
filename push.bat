@@ -22,6 +22,7 @@ set /p msg="Commit Message: "
 echo.
 if "%msg%"=="" goto e
 call :colorEcho 40 "[Processing...]"
+echo.
 git commit -m "%msg%"
 echo.
 git push 
