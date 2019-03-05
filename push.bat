@@ -16,7 +16,7 @@ git push
 
 call :colorEcho a0 "[Push Complete]"
 echo.
-SLEEP 1
+SLEEP 3
 exit 
 :colorEcho
 echo off
