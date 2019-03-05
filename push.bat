@@ -16,8 +16,7 @@ git push
 
 call :colorEcho a0 "[Push Complete]"
 echo.
-SLEEP 3
-exit 
+ping 127.0.0.1 -n 3 > nul
 :colorEcho
 echo off
 <nul set /p ".=%DEL%" > "%~2"
