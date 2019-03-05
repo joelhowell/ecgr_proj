@@ -13,19 +13,6 @@
 >
 >The game board each player gets has two grids. One of the grids is used by the player to "hide" the location of his own ships, while the other grid is used to record the shots fired toward the opponent and to document whether those shots were hits or misses. The goal of the game is to sink all of the opponent's ships by correctly guessing their location on the grid (Brown).
 
-The main differences between traditional battleship and this project are as follows:
-
-Traditionally, there are five ships:
-- Carrier		(5 holes)
-- Battleship 	(4 holes)
-- Cruiser		(3 holes)
-- Submarine 	(3 holes)
-- Destroyer 	(2 holes)
-
-This version of battleship is heavily simplified:
-- Battleship	(4 holes)
-- Submarine		(3 holes)
-- Destroyer		(2 holes)
 
 ## License
 This project is licensed under the MIT License, see the [LICENSE.md](LICENSE "MIT License") file for details.

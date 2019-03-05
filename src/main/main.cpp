@@ -1,0 +1,8 @@
+
+class Main
+{
+    int main()
+    {
+        
+    }
+}
