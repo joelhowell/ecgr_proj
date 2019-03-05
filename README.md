@@ -1,14 +1,10 @@
 # C++ Battleship 
 ### ECGR 2103 Major Project
 
-<p align="center">
- <img width="477" height="244" src="/res/flaming.png">
-
+![alt text](res/flaming.png "The Flaming Burritos")
 ###### The Flaming Burritos
 
 *By: Joel H, Will W, Kelby P, and Abdul E.*
-
-</p>
 
 ## Description
 >Battleship is a war-themed board game for two players in which the opponents try to guess the location of the other's various ships. A paper and pencil version of the game dates back to World War I, but most people are familiar with the game through the plastic board game that was first marketed by the Milton Bradley Company in 1967. Since then, the game has spawned various video games and smartphone app variations. Today, the board game version is produced by Hasbro, which acquired Milton Bradley in 1984. 
