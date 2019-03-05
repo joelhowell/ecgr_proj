@@ -1,8 +1,8 @@
 @echo off
 title git push
-SETLOCAL EnableDelayedExpansion
+setlocal EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
-  set "DEL=%%a"
+  set "del=%%a"
 )
 call :colorEcho e0 "[Git Status]"
 echo.
@@ -10,7 +10,7 @@ echo.
 git status
 echo.
 set /p i="Type e to cancel, otherwise press enter: "
-if /I "%i%"=="e" exit
+if /i "%i%"=="e" exit
 
 git add . 
 
