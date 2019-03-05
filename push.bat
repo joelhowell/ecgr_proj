@@ -16,9 +16,9 @@ git push
 
 call :colorEcho a0 "[Push Complete]"
 echo.
-ping 127.0.0.1 -n 3 > nul
+ping 127.0.0.1 -n 1 > nul
+exit
 :colorEcho
-echo off
 <nul set /p ".=%DEL%" > "%~2"
 findstr /v /a:%1 /R "^$" "%~2" nul
 del "%~2" > nul 2>&1i
