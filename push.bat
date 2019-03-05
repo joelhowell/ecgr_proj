@@ -1,5 +1,5 @@
 @echo off
-title git
+title git push
 SETLOCAL EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
   set "DEL=%%a"
@@ -8,16 +8,25 @@ call :colorEcho e0 "[Git Status]"
 echo.
 
 git status
-pause
+echo.
+set /p i="Type e to cancel, otherwise press enter: "
+if /I "%i%"=="e" exit
+
 git add . 
-set /p msg=Commit Message: 
+
+:cmsg
+set /p msg="Commit Message: "
+if "%msg%"=="" goto e
 git commit -m %msg%
 git push
-
 call :colorEcho a0 "[Push Complete]"
 echo.
 ping 127.0.0.1 -n 2 > nul
 exit
+:e
+echo You must input a commit message.
+goto cmsg
+
 :colorEcho
 <nul set /p ".=%DEL%" > "%~2"
 findstr /v /a:%1 /R "^$" "%~2" nul
