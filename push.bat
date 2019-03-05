@@ -22,7 +22,7 @@ git commit -m %msg%
 call :colorEcho c0 "[Processing...]"
 echo.
 git push
-call :colorEcho a0 "[Push Complete]"
+call :colorEcho 40 "[Push Complete]"
 echo.
 ping 127.0.0.1 -n 2 > nul
 exit
