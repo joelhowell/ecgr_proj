@@ -16,6 +16,7 @@ git add .
 
 :cmsg
 set /p msg="Commit Message: "
+echo.
 if "%msg%"=="" goto e
 git commit -m %msg%
 git push
@@ -23,6 +24,7 @@ call :colorEcho a0 "[Push Complete]"
 echo.
 ping 127.0.0.1 -n 2 > nul
 exit
+
 :e
 echo You must input a commit message.
 goto cmsg
