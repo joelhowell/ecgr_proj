@@ -14,5 +14,5 @@
 This project is licensed under the MIT License, see the [LICENSE.md](LICENSE "MIT License") file for details.
 
 
-#### Citations
-Brown, Seth. “Learn the Basics of Battleship with This Easy Guide.” *The Spruce Crafts*, TheSpruceCrafts, 22 Feb. 2019, www.thesprucecrafts.com/the-basic-rules-of-battleship-411069.
+###### Citations
+###### Brown, Seth. “Learn the Basics of Battleship with This Easy Guide.” *The Spruce Crafts*, TheSpruceCrafts, 22 Feb. 2019, www.thesprucecrafts.com/the-basic-rules-of-battleship-411069.
