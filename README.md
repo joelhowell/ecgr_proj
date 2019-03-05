@@ -7,7 +7,7 @@ By: Joel H, Will W, Kelby P, and Abdul E.
 Battleship is a war-themed boardgame in which opponents guess the location of the other's ships. 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md MIT License) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](ecgr_project/LICENSE.md MIT License) file for details.
 
 
 #### Citations
