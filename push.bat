@@ -1,14 +1,17 @@
 @echo off
 title git push
+
 setlocal EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
   set "del=%%a"
 )
-call :colorEcho c0 "[Git Status]"
+
+call :colorEcho e0 "[Git Status]"
 echo.
 
 git status
 echo.
+
 set /p i="Type e to cancel, otherwise press enter: "
 if /i "%i%"=="e" exit
 
@@ -25,7 +28,7 @@ git push
 echo.
 call :colorEcho a0 "[Push Complete]"
 echo.
-ping 127.0.0.1 -n 2 > nul
+ping localhost -n 2 > nul
 exit
 
 :e
