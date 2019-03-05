@@ -10,14 +10,14 @@ echo.
 git status
 pause
 git add . 
-set /p m=Commit Message: 
-git commit -m %m%
+set /p msg=Commit Message: 
+git commit -m %msg%
 git push
 
 call :colorEcho a0 "[Push Complete]"
 echo.
 SLEEP 1
-
+exit 
 :colorEcho
 echo off
 <nul set /p ".=%DEL%" > "%~2"
