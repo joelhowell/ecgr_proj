@@ -23,7 +23,7 @@ echo.
 if "%msg%"=="" goto e
 call :colorEcho 40 "[Processing...]"
 echo.
-git commit -m "%msg%" 
+git commit -m "%msg%" -q
 echo.
 git push 
 echo.
