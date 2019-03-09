@@ -1,8 +1,0 @@
-
-class Main
-{
-    int main()
-    {
-        
-    }
-}
