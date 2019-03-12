@@ -1,5 +1,6 @@
 #include <iostream>
 #include <Windows.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -19,6 +20,9 @@ void splash()
 
 void init()
 {
+	//	Clear screen
+	system("cls");
+	
 	//	Full screen
 	SetConsoleDisplayMode(GetStdHandle(STD_OUTPUT_HANDLE), CONSOLE_FULLSCREEN_MODE, 0);
 	splash();
@@ -27,6 +31,8 @@ void init()
 int main()
 {
 	init();
+
+	system("pause");
 
 	return 0;
 }
