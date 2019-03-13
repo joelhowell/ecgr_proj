@@ -4,6 +4,13 @@
 
 using namespace std;
 
+int consoleWindow()
+{
+	int height;
+	
+	return height;
+}
+
 void splash()
 {
 	cout << "@@@@@@@       @@@@@@      @@@@@@@     @@@@@@@     @@@          @@@@@@@@      @@@@@@      @@@  @@@     @@@     @@@@@@@ 		" << endl;
