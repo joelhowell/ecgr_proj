@@ -10,7 +10,7 @@
  *																											*
  *		Date Created:		3/5/2019																		*
  *																											*
- *		Last Modified:		3/12/2019																		*
+ *		Last Modified:		3/15/2019																		*
  *																											*
  *		Purpose:																							*
  *																											*
@@ -18,23 +18,15 @@
  ***********************************************************************************************************/										
 
 #include "pch.h"
-#include "libraries.h"
+#include <conio.h>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <Windows.h>
 
 using namespace std;
 
-/*	Declaration of global variables  */
-const string VERSION_INFO = "v1.0.0";
-const string TEAM_NAME = "Flaming Burritos";
-const string NAVIGATION_MSG = "Use the up and down arrows to navigate. To select, press return.";
-
-const int REFRESH = 75;
-const int YDOWN = 52;
-
-bool showHelpMenu = false;
-bool showDifficultyMenu = false;
-
-
-/*	Declare functions  */
 string horizontalAlign(int n);
 void cls();
 void difficultySelect();
@@ -46,7 +38,20 @@ void menu();
 void textColor(int c);
 void titleSplash(int c);
 void verticalAlign(int lines);
-void xyColored(int x, int y, int c, string msg); 
+void xyColored(int x, int y, int c, string msg);
+
+/*	Declaration of global variables  */
+const string VERSION_INFO = "v1.0.0";
+const string TEAM_NAME = "Flaming Burritos";
+const string NAVIGATION_MSG = "Use the up and down arrows to navigate. To select, press return.";
+
+const int REFRESH = 125;
+const int YDOWN = 52;
+
+bool showHelpMenu = false;
+bool showDifficultyMenu = false;
+
+int menuAnimation = 60;
 
 /*  Begin Main  */
 int main()
@@ -84,23 +89,27 @@ void menu()
 	string t = horizontalAlign(13);
 	string t2 = horizontalAlign(11);
 
+	//	Clear screen
+	cls();
+
+	//	Ensure text color is default for menu items
+	textColor(9);
+
+	//	Display titleSplash title
+	titleSplash(1);
+
+	//	Properly display navigation instructions and version info, as well as relocate the cursor to original position
+	xyColored(2, YDOWN, 3, NAVIGATION_MSG);
+	xyColored(202, YDOWN, 3, VERSION_INFO);
+	gotoXY(0, 0, "");
+
+
 	while (showHelpMenu == false || showDifficultyMenu == false)
 	{
-		//	Clear screen
-		cls();
+		//	Only redraw menu items and not the entire screen and therefore reduce flicker
+		gotoXY(0, (YDOWN / 2) + 2, "    ");
 
-		//	Ensure text color is default
-		textColor(9);
-
-		//	Properly display navigation instructions and version info, as well as relocate the cursor to original position
-		xyColored(2, YDOWN, 3, NAVIGATION_MSG);
-		xyColored(202, YDOWN, 3, VERSION_INFO);
-		gotoXY(0, 0, "");
-
-		//	Display titleSplash title
-		titleSplash(1);
-
-		//	Display menu items and determine what to highlight as selected
+		//	Display menu items and determine what to highlight as the selected option
 		for (int i = 0; i < 3; i++)
 		{
 			if (i == index)
@@ -124,7 +133,6 @@ void menu()
 				{
 					index = 2;
 				}
-				Sleep(REFRESH);
 				break;
 			}
 			else
@@ -136,7 +144,6 @@ void menu()
 					{
 						index = 0;
 					}
-					Sleep(REFRESH);
 					break;
 				}
 				else
@@ -162,7 +169,7 @@ void menu()
 				}
 			}
 		}
-		//	Reduce flicker
+		//	Input delay/reduce flicker
 		Sleep(REFRESH);
 	}
 }
@@ -174,20 +181,35 @@ void titleSplash(int color)
 	string t = horizontalAlign(6);
 	verticalAlign(10);
 
-	textColor(color);
+	textColor(color);	
 
+	//	Show title splash with delay animation
 	cout << t << "@@@@@@@       @@@@@@      @@@@@@@     @@@@@@@     @@@          @@@@@@@@      @@@@@@      @@@  @@@     @@@     @@@@@@@ 	" << endl;
+	Sleep(menuAnimation);
 	cout << t << "@@@@@@@@     @@@@@@@@     @@@@@@@     @@@@@@@     @@@          @@@@@@@@     @@@@@@@      @@@  @@@     @@@     @@@@@@@@	" << endl;
+	Sleep(menuAnimation);
 	cout << t << "@@!  @@@     @@!  @@@       @@!         @@!       @@!          @@!          !@@          @@!  @@@     @@!     @@!  @@@	" << endl;
+	Sleep(menuAnimation);
 	cout << t << "!@   @!@     !@!  @!@       !@!         !@!       !@!          !@!          !@!          !@!  @!@     !@!     !@!  @!@	" << endl;
+	Sleep(menuAnimation);
 	cout << t << "@!@!@!@      @!@!@!@!       @!!         @!!       @!!          @!!!:!       !!@@!!       @!@!@!@!     !!@     @!@@!@! 	" << endl;
+	Sleep(menuAnimation);
 	cout << t << "!!!@!!!!     !!!@!!!!       !!!         !!!       !!!          !!!!!:        !!@!!!      !!!@!!!!     !!!     !!@!!!  	" << endl;
+	Sleep(menuAnimation);
 	cout << t << "!!:  !!!     !!:  !!!       !!:         !!:       !!:          !!:               !:!     !!:  !!!     !!:     !!:     	" << endl;
+	Sleep(menuAnimation);
 	cout << t << ":!:  !:!     :!:  !:!       :!:         :!:        :!:         :!:              !:!      :!:  !:!     :!:     :!:     	" << endl;
+	Sleep(menuAnimation);
 	cout << t << " :: ::::     ::   :::        ::          ::        :: ::::      :: ::::     :::: ::      ::   :::      ::      ::     	" << endl;
+	Sleep(menuAnimation);
 	cout << t << ":: : ::       :   : :        :           :        : :: : :     : :: ::      :: : :        :   : :     :        :      	" << endl;
+	Sleep(menuAnimation);
 
+	//	Pre-align for menut items
 	verticalAlign(10);
+
+	//	After animation has shown once, do not repeat if main menu is repeated.
+	menuAnimation = 0;
 }
 
 void helpSplash(int color)
@@ -195,7 +217,7 @@ void helpSplash(int color)
 	/*	Help Splash Screen  */
 	//	Center string horizontally and vertically, as well as change the color of text
 	string t = horizontalAlign(6);
-	verticalAlign(6);
+	verticalAlign(10);
 
 	textColor(color);
 
@@ -235,17 +257,18 @@ void helpMessage()
 {
 	/*	Help Screen Body  */
 	//	Center string horizontally and vertically, as well as change the color of text
-	string t = horizontalAlign(9);
-	verticalAlign(2);
+	string title = horizontalAlign(13);
+	string body = horizontalAlign(3);
+	verticalAlign(4);
 	textColor(13);
 
-	cout << t << " _     _                                   _             " << endl;
-	cout << t << "| |   | |               _                 | |            " << endl;
-	cout << t << "| |__ | | ___  _ _ _   | |_  ___     ____ | | ____ _   _ " << endl;
-	cout << t << "|  __)| |/ _ \\| | | |  |  _)/ _ \\   |  _ \\| |/ _  | | | |" << endl;
-	cout << t << "| |   | | |_| | | | |  | |_| |_| |  | | | | ( ( | | |_| |" << endl;
-	cout << t << "|_|   |_|\\___/ \\____|   \\___)___/   | ||_/|_|\\_||_|\\__  |" << endl;
-	cout << t << "                                    |_|           (____/ " << endl;
+	cout << title <<  "How to Play" << endl << endl;
+	cout << body << "Battleship tests your might and wit in an intense one versus one battle between two admirals of the sea. In this game, each player will have their ships" << endl << body <<
+		"randomly placed on a grid labeled with a series of numbers and letters (ex. A3, C4) and be asked to choose a point on the other players board to fire upon." << endl << body <<
+		"If the player is successful, they will land a hit on the opposing players ship, and if they manage to hit each point on the ship, it will sink. If the player misses, " << endl << body <<
+		"well, better luck next time.The game ends when one player successfully destroys the other players entire armada." << endl;
+
+	
 }
 
 void difficultySelect()
@@ -271,7 +294,7 @@ void cls()
 {
 	//	Clears screen
 	system("cls");
-} 
+}
 
 void textColor(int c)
 {
