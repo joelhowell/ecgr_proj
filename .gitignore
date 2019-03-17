@@ -1,2 +1,3 @@
-# Ignore folder .vscode
-.vscode/
+# Ignore object files
+*.o
+!spec/*.o
