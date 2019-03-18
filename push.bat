@@ -30,7 +30,7 @@ git push
 echo.
 call :colorEcho a0 "[Push Complete]"
 echo.
-ping localhost -n 2 > nul
+ping localhost -n 1 > nul
 exit
 
 :e
