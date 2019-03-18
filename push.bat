@@ -10,6 +10,7 @@ call :colorEcho e0 "[Git Status]"
 echo.
 
 git status
+git config core.autocrlf true
 echo.
 
 set /p i="Type e to cancel, otherwise press enter: "
