@@ -10,7 +10,7 @@ namespace utils
 	const std::string TEAM_NAME = "Flaming Burritos";
 	const std::string NAVIGATION_MSG = "Use the up and down arrows to navigate. To select, press return.";
 
-	const int REFRESH = 125;
+	const int REFRESH = 150;
 	const int YDOWN = 52;
 
 	bool showHelpMenu = false;
