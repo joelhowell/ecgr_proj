@@ -29,7 +29,5 @@ int main()
     init();
     menu();
     //helpScreen();
-    //cout << " Test";
-    //system("pause");
     return 0;
 }
