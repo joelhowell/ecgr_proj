@@ -71,7 +71,7 @@ namespace utils
         //	Show splash, version, and check for ESC keypress
         cls();
         helpSplash(1);
-        xyColored(2, YDOWN, 3, "To go back to the main menu, press ESC.");
+        xyColored(2, YDOWN, 3, GO_BACK);
         xyColored(202, YDOWN, 3, VERSION_INFO);
 
         while (showHelpMenu == true)
@@ -107,7 +107,7 @@ namespace utils
         /*  Difficulty Select Menu  */
         //	Show splash, version, check for ESC keypress
         cls();
-        xyColored(2, YDOWN, 3, "To go back to the main menu, press ESC.");
+        xyColored(2, YDOWN, 3, GO_BACK);
         xyColored(202, YDOWN, 3, VERSION_INFO);
 
         while (showDifficultyMenu == true)

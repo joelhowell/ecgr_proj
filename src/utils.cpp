@@ -9,6 +9,7 @@ namespace utils
     const std::string VERSION_INFO = "v1.0.0";
 	const std::string TEAM_NAME = "Flaming Burritos";
 	const std::string NAVIGATION_MSG = "Use the up and down arrows to navigate. To select, press return.";
+    const std::string GO_BACK = "To go back to the main menu, press ESC.";
 
 	const int REFRESH = 150;
 	const int YDOWN = 52;

@@ -10,6 +10,7 @@ namespace utils
     extern const std::string VERSION_INFO;
 	extern const std::string TEAM_NAME;
 	extern const std::string NAVIGATION_MSG;
+    extern const std::string GO_BACK;
 
 	extern const int REFRESH;
 	extern const int YDOWN;
