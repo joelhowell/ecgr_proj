@@ -22,12 +22,12 @@
 using namespace std;
 using namespace utils;
 
-/*  Begin Main  */
 int main()
 {
     /*	Game Initialization	 */
     init();
     menu();
     //helpScreen();
+    //system("pause");
     return 0;
 }

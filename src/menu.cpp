@@ -23,9 +23,9 @@ namespace utils
         //	Display titleSplash title
         titleSplash(1);
 
-        //	Properly display navigation instructions and version info, as well as relocate the cursor to original position
+        //	Properly display navigation instructions and version info, as well as relocate the cursor to set position
         xyColored(2, YDOWN, 3, NAVIGATION_MSG);
-        xyColored(202, YDOWN, 3, VERSION_INFO);
+        xyColored(205, YDOWN, 3, VERSION_INFO);
         gotoXY(0, 0, "");
 
 
@@ -40,12 +40,12 @@ namespace utils
                 if (i == index)
                 {
                     textColor(12);
-                    cout << t << MenuItems[i] << endl << endl;
+                    cout << t << "  " << MenuItems[i] << endl << endl;
                 }
                 else
                 {
                     textColor(9);
-                    cout << t << MenuItems[i] << endl << endl;
+                    cout << t << "  " << MenuItems[i] << endl << endl;
                 }
             }
 

@@ -47,7 +47,7 @@ namespace utils
     {
         /*	Help Splash Screen  */
         //	Center string horizontally and vertically, as well as change the color of text
-        string t = horizontalAlign(6);
+        string t = horizontalAlign(7);
         verticalAlign(10);
 
         textColor(color);
@@ -72,7 +72,8 @@ namespace utils
         cls();
         helpSplash(1);
         xyColored(2, YDOWN, 3, GO_BACK);
-        xyColored(202, YDOWN, 3, VERSION_INFO);
+        xyColored(205, YDOWN, 3, VERSION_INFO);
+        gotoXY(210, YDOWN + 1, "");
 
         while (showHelpMenu == true)
         {
@@ -88,27 +89,36 @@ namespace utils
     {
         /*	Help Screen Body  */
         //	Center string horizontally and vertically, as well as change the color of text
-        string title = horizontalAlign(13);
-        string body = horizontalAlign(3);
+        string title = horizontalAlign(12);
+        string hbody = horizontalAlign(3);
+        string cbody = horizontalAlign(6);
+
         verticalAlign(4);
-        textColor(13);
 
-        cout << title <<  "How to Play" << endl << endl;
-        cout << body << "Battleship tests your might and wit in an intense one versus one battle between two admirals of the sea. In this game, each player will have their ships" << endl << body <<
-            "randomly placed on a grid labeled with a series of numbers and letters (ex. A3, C4) and be asked to choose a point on the other players board to fire upon." << endl << body <<
-            "If the player is successful, they will land a hit on the opposing players ship, and if they manage to hit each point on the ship, it will sink. If the player misses, " << endl << body <<
-            "well, better luck next time.The game ends when one player successfully destroys the other players entire armada." << endl;
+        textColor(2);
+        cout << title <<  "     How to Play" << endl << endl;
 
+        textColor(5);
+        cout << hbody << "Battleship tests your might and wit in an intense one versus one battle between two admirals of the sea. In this game, each player will have their ships randomly" << endl << hbody <<
+            "placed on a grid labeled with a series of numbers and letters (ex. A3, C4) and be asked to choose a point on the other players board to fire upon. If the player" << endl << hbody <<
+            "is successful, they will land a hit on the opposing players ship, and if they manage to hit each point on the ship, it will sink. If the player misses, well," << endl << hbody <<
+            "better luck next time. The game ends when one player successfully destroys the other players entire armada." << endl << endl << endl;
+       
+        textColor(2);
+        cout << title << "      Controls" << endl << endl;
         
+        textColor(5);
+        cout << cbody << "To navigate, use the up and down arrows on the keyboard. To select an option press the enter key. To go back, press ESC." << endl;
     }
 
     void difficultySelect()
     {
         /*  Difficulty Select Menu  */
-        //	Show splash, version, check for ESC keypress
+        //	Clear, show splash, version, check for ESC keypress
         cls();
         xyColored(2, YDOWN, 3, GO_BACK);
-        xyColored(202, YDOWN, 3, VERSION_INFO);
+        xyColored(205, YDOWN, 3, VERSION_INFO);
+        gotoXY(210, YDOWN + 1, "");
 
         while (showDifficultyMenu == true)
         {
