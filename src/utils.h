@@ -17,7 +17,7 @@ namespace utils
 
 	extern bool showHelpMenu;
 	extern bool showDifficultyMenu;
-
+    
 	extern int menuAnimation;
 
     std::string horizontalAlign(int n);
@@ -31,7 +31,7 @@ namespace utils
     void textColor(int c);
     void titleSplash(int c);
     void verticalAlign(int lines);
-    void xyColored(int x, int y, int c, std::string msg); 
+    void xyColored(int x, int y, int c, std::string msg);
 }
   
 #endif /* _UTILS_H */   
