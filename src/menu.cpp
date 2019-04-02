@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "utils.h"
 
 using namespace std;
@@ -7,95 +8,58 @@ namespace utils
 {
     void menu()
     {
-        /*	Main Menu  */
-        //	Declare necessary vars for menu items, index, and tab indent
-        int index = 0;
-        string MenuItems[3] = { "Play", "Help", "Exit" };
-        string t = horizontalAlign(13);
-        string t2 = horizontalAlign(11);
+        //  Declare local vars
+        string input;
+        bool valid = true;
 
-        //	Clear screen
-        cls();
-
-        //	Ensure text color is default for menu items
-        textColor(9);
-
-        //	Display titleSplash title
-        titleSplash(1);
-
-        //	Properly display navigation instructions and version info, as well as relocate the cursor to set position
-        xyColored(2, YDOWN, 3, NAVIGATION_MSG);
-        xyColored(205, YDOWN, 3, VERSION_INFO);
-        gotoXY(0, 0, "");
-
-
-        while (showHelpMenu == false || showDifficultyMenu == false)
+        //  Info
+        cout << "Battleship by " << TEAM_NAME << " | " << VERSION_INFO << endl << "---------------------------------------" << endl;
+        
+        //  Get P1 and P2 names
+        for(int i = 0; i < 2; i++)
         {
-            //	Only redraw menu items and not the entire screen and therefore reduce flicker
-            gotoXY(0, (YDOWN / 2) + 2, "    ");
-
-            //	Display menu items and determine what to highlight as the selected option
-            for (int i = 0; i < 3; i++)
+            cout << "Commander " << i + 1 << " enter your name: ";
+            getline(cin, input);
+            cout << "Welcome aboard, '" << input << "', your fleet awaits your command." << endl << endl;
+        } 
+        cout << "---------------------------------------" << endl;
+        
+        //  Get input until valid selection
+        do
+        {
+            cout << "Please enter a difficulty: 'e' for easy, 'm' for medium, or 'h' for hard: ";
+            getline(cin, input);
+            
+            if(input == "e" || input == "E")
             {
-                if (i == index)
-                {
-                    textColor(12);
-                    cout << t << "  " << MenuItems[i] << endl << endl;
-                }
-                else
-                {
-                    textColor(9);
-                    cout << t << "  " << MenuItems[i] << endl << endl;
-                }
+                cout << endl << endl << "You have selected easy difficulty." << endl;
+                difficulty = 5;
+                valid = true;
             }
-
-            while (1)
+            else
             {
-                if (GetAsyncKeyState(VK_UP) != 0)
+                if(input == "m" || input == "M")
                 {
-                    index--;
-                    if (index == -1)
-                    {
-                        index = 2;
-                    }
-                    break;
+                    cout << endl << endl << "You have selected medium difficulty." << endl;
+                    difficulty = 6;
+                    valid = true;
                 }
                 else
                 {
-                    if (GetAsyncKeyState(VK_DOWN) != 0)
+                    if(input == "h" || input == "H")
                     {
-                        index++;
-                        if (index == 3)
-                        {
-                            index = 0;
-                        }
-                        break;
+                        cout << endl << endl << "You have selected hard difficulty." << endl;
+                        difficulty = 7;
+                        valid = true;
                     }
                     else
                     {
-                        if (GetAsyncKeyState(VK_RETURN) != 0)
-                        {
-                            switch (index)
-                            {
-                            case 0:
-                                showDifficultyMenu = true;
-                                difficultySelect();
-                                break;
-                            case 1:
-                                showHelpMenu = true;
-                                helpScreen();
-                                break;
-                            case 2:
-                                cls();
-                                exit(EXIT_SUCCESS);
-                                break;
-                            }
-                        }
+                        valid = false;
                     }
                 }
             }
-            //	Input delay/reduce flicker
-            Sleep(REFRESH);
-        }
+        } while (valid == false);  
+        cout << endl << "Difficulty multiplier: " << difficulty << endl;
+        drawBoard();
     }
 }

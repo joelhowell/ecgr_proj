@@ -18,20 +18,22 @@
  ***********************************************************************************************************/										
 
 #include "utils.h"
-
+#include <iostream>
 using namespace std;
 using namespace utils;
 
 int main()
 {
     /*	Game Initialization	 */
-    init();
+    // init();
+    cls();
     menu();
-    //helpScreen();
-    
+    //drawBoard();
+    //getCoords();
 
-    
-   // system("pause");
+
+   
+    system("pause");
     
     return 0;
 }
