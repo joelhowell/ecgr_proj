@@ -9,29 +9,17 @@ namespace utils
      /*	Declaration of global variables */
     extern const std::string VERSION_INFO;
 	extern const std::string TEAM_NAME;
-	extern const std::string NAVIGATION_MSG;
-    extern const std::string GO_BACK;
 
-	extern const int REFRESH;
-	extern const int YDOWN;
-
-	extern bool showHelpMenu;
-	extern bool showDifficultyMenu;
-    
-	extern int menuAnimation;
+    extern int difficulty;
 
     std::string horizontalAlign(int n);
     void cls();
-    void difficultySelect();
-    void gotoXY(int x, int y, std::string msg);
-    void helpMessage();
-    void helpScreen();
-    void init();
     void menu();
-    void textColor(int c);
-    void titleSplash(int c);
     void verticalAlign(int lines);
-    void xyColored(int x, int y, int c, std::string msg);
+    void drawBoard();
+    int getX(std::string input);
+    int getY(std::string input);
+    
 }
   
 #endif /* _UTILS_H */   
