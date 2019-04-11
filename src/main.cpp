@@ -5,12 +5,14 @@
  *		Version:			1.0.0																			*
  *																											*
  *		Team Name:			Flaming Burritos																*
+ *                                                                                                          *
+ *      Senior Developer:   Joel H                                                                          *                                                           *
  *																											*
- *		Developers:			Joel H, Will W, Kelby P, Richard O, and Abdul E.								*
+ *		Developers:			Will W, Kelby P, Richard O, and Abdul E.								        *
  *																											*
  *		Date Created:		3/5/2019																		*
  *																											*
- *		Last Modified:		3/15/2019																		*
+ *		Last Modified:		4/11/2019																		*
  *																											*
  *		Purpose:            To play battleship :)															*
  *																											*
@@ -24,13 +26,9 @@ using namespace utils;
 
 int main()
 {
-    /*	Game Initialization	 */
+    /*	Game  */
     cls();
     menu();
-    //difficulty = 5;
-    
-    gameInit();
-
     system("pause");
     
     return 0;

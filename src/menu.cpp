@@ -12,7 +12,7 @@ namespace utils
         string input;
         bool valid = true;
 
-        //  Info
+        //  Title info
         cout << "Battleship by " << TEAM_NAME << " | " << VERSION_INFO << endl << "---------------------------------------" << endl;
         
         //  Get P1 and P2 names
@@ -26,6 +26,7 @@ namespace utils
         cout << "---------------------------------------" << endl;
         
         //  Get input until valid selection
+        //  Difficulty not case sensitive
         do
         {
             cout << "Please enter a difficulty: 'e' for easy, 'm' for medium, or 'h' for hard: ";
@@ -60,7 +61,8 @@ namespace utils
                 }
             }
         } while (valid == false);  
-        cout << endl << "Difficulty multiplier: " << difficulty << endl;
+        
+        //  Run Game
         gameInit();
     }
 }
