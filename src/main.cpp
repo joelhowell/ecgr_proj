@@ -12,7 +12,7 @@
  *																											*
  *		Last Modified:		3/15/2019																		*
  *																											*
- *		Purpose:																							*
+ *		Purpose:            To play battleship :)															*
  *																											*
  *																											*
  ***********************************************************************************************************/										
@@ -25,14 +25,12 @@ using namespace utils;
 int main()
 {
     /*	Game Initialization	 */
-    // init();
     cls();
     menu();
-    //drawBoard();
-    //getCoords();
+    //difficulty = 5;
+    
+    gameInit();
 
-
-   
     system("pause");
     
     return 0;

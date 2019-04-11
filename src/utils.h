@@ -2,7 +2,6 @@
 #define _UTILS_H
 
 #include <string>
-#include <Windows.h>
 
 namespace utils
 {
@@ -10,16 +9,30 @@ namespace utils
     extern const std::string VERSION_INFO;
 	extern const std::string TEAM_NAME;
 
+    extern const int maxHits;
     extern int difficulty;
+    extern int hits;
 
-    std::string horizontalAlign(int n);
+    extern std::string players[2];
+    extern std::string p1;
+    extern std::string p2;
+
+    int getColumn(std::string input);
+    int getRandom();
+    int getRow(std::string input);
+
     void cls();
+    void easy(int randomNum);
+    void game();
+    void gameInit();
+    void getCoords(std::string p);
+    void hard(int randomNum);
+    void initBackgroundBoards();
+    void initOutputBoards();
+    void isHit(int r, int c, std::string t);
+    void med(int randomNum);
     void menu();
-    void verticalAlign(int lines);
-    void drawBoard();
-    int getX(std::string input);
-    int getY(std::string input);
-    
+    void refresh();
 }
   
 #endif /* _UTILS_H */   

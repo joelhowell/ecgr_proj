@@ -21,6 +21,7 @@ namespace utils
             cout << "Commander " << i + 1 << " enter your name: ";
             getline(cin, input);
             cout << "Welcome aboard, '" << input << "', your fleet awaits your command." << endl << endl;
+            players[i] = input;
         } 
         cout << "---------------------------------------" << endl;
         
@@ -60,6 +61,6 @@ namespace utils
             }
         } while (valid == false);  
         cout << endl << "Difficulty multiplier: " << difficulty << endl;
-        drawBoard();
+        gameInit();
     }
 }
