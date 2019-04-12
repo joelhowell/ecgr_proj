@@ -6,7 +6,7 @@ using namespace std;
 namespace utils
 {
     /*	Assignment of global variables */
-    const std::string VERSION_INFO = "v1.2.1";
+    const std::string VERSION_INFO = "v1.4.0";
 	const std::string TEAM_NAME = "Flaming Burritos";
     
     const int maxHits = 9;

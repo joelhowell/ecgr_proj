@@ -86,8 +86,19 @@ namespace utils
         //  Clear/refresh screen
         cls();
 
-        //  P1 & P2 display board headings A B C...etc
-        cout << endl << "\t" << p1 << "'s Board:" << "\t\t\t\t" << p2 << "'s Board:" << endl << endl << " ";
+        //  P1 & P2 display board headings and A B C...etc
+        switch(difficulty)
+        {
+            case 5:
+            case 6:
+                cout << endl << "\t\t" << p1 << "'s Board:" << "\t\t\t\t" << p2 << "'s Board:" << endl << endl << " ";                
+                break;
+            default:
+                cout << endl << "\t\t\t" << p1 << "'s Board:" << "\t\t\t\t\t" << p2 << "'s Board:" << endl << endl << " ";
+                break;
+        }
+
+        cout << "\t";
 
         for(char c = 'A'; c < difficulty + 65; c++)
             cout << setw(5) << c;
@@ -100,7 +111,7 @@ namespace utils
         for(int r = 0; r < rows; r++)
         {
             //  Print row numbers
-            cout << r + 1;
+            cout << "\t" << r + 1;
 
             //  Refresh P1 Output Board
             for(int c = 0; c < columns; c++)
@@ -731,8 +742,19 @@ namespace utils
         rows = difficulty;
         columns = difficulty;
 
-        //  P1 & P2 display board headings A B C...etc
-        cout << endl << "\t" << p1 << "'s Board:" << "\t\t\t\t" << p2 << "'s Board:" << endl << endl << " ";
+        //  P1 & P2 display board headings and A B C...etc
+        switch(difficulty)
+        {
+            case 5:
+            case 6:
+                cout << endl << "\t\t" << p1 << "'s Board:" << "\t\t\t\t" << p2 << "'s Board:" << endl << endl << " ";                
+                break;
+            default:
+                cout << endl << "\t\t\t" << p1 << "'s Board:" << "\t\t\t\t\t" << p2 << "'s Board:" << endl << endl << " ";
+                break;
+        }
+
+        cout << "\t";
 
         for(char c = 'A'; c < difficulty + 65; c++)
             cout << setw(5) << c;
@@ -745,7 +767,7 @@ namespace utils
         for(int r = 0; r < rows; r++)
         {
             //  Print row numbers
-            cout << r + 1;
+            cout << "\t" << r + 1;
 
             //  Initialize P1 Board
             for(int c = 0; c < columns; c++)
@@ -777,7 +799,7 @@ namespace utils
         while(validLocation == false)
         {
             //  Get coordinate to "fire" upon
-            cout << "Commander " << p << ", enter firing coordinates (Ex: A4): ";
+            cout << endl << "Commander " << p << ", enter firing coordinates (Ex: A4): ";
             cin >> coord;
 
             //  Handle lowercase and convert to uppercase
@@ -788,9 +810,10 @@ namespace utils
             column = getColumn(coord);
 
             //  Ensure input is within range otherwise continue to ask for input
-            if((row > difficulty - 1 || row < 0) || (column > difficulty - 1 || column < 0))
+            if((row > difficulty - 1 || row < 0) || (column > difficulty - 1 || column < 0) || coord.size() > 2)
             {
-                cout << "Sorry commander, that's not a valid location! Try again." << endl << endl;
+                //cout << "Sorry commander, that's not a valid location! Try again." << endl << endl;
+                cout << "So hey, " << p << ", the board is labeled. Look at it and choose a location ON THE BOARD!" << endl;
             }
             else
             {
