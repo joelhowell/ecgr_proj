@@ -1,20 +1,20 @@
 /************************************************************************************************************
 *                                                                                                           *
-*       Project Name:       Battleship                                                                      *
+*           Project Name:       Battleship                                                                  *
 *                                                                                                           *
-*       Version:            1.0.0                                                                           *
+*           Version:            1.0.0                                                                       *
 *                                                                                                           *
-*       Team Name:          Flaming Burritos                                                                *
+*           Team Name:          Flaming Burritos                                                            *
 *                                                                                                           *
-*       Senior Developer:   Joel H                                                                          *
+*           Senior Developer:   Joel H                                                                      *
 *                                                                                                           *
-*       Developers:         Will W, Kelby P, Richard O, and Abdul E.                                        *
+*           Developers:         Will W, Kelby P, Richard O, and Abdul E.                                    *
 *                                                                                                           *
-*       Date Created:       3/5/2019                                                                        *
+*           Date Created:       3/5/2019                                                                    *
 *                                                                                                           *
-*       Last Modified:      4/11/2019                                                                       *
+*           Last Modified:      4/11/2019                                                                   *
 *                                                                                                           *
-*       Purpose:            To play battleship :)                                                           *
+*           Purpose:            To play battleship :)                                                       *
 *                                                                                                           *
 *************************************************************************************************************/	  
 
