@@ -11,7 +11,7 @@ TARGET			= build/Battleship.exe
 OBJ             = $(patsubst $(SRC)/%.cpp,$(BIN)/%.o,$(SRCS)) 
 
 CXX				= g++
-CXXOPTS			= -Wall -ansi -static-libgcc -static-libstdc++ -std=c++11 -IC:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.17763.0
+CXXOPTS			= -Wall -ansi -static-libgcc -static-libstdc++ -std=c++11
 RM				= del /Q
 
 all:			$(TARGET)
