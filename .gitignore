@@ -1,0 +1,9 @@
+# Ignore object files
+*.o
+
+# Ignore compilation runner
+compile.bat
+
+# Ignore vscode directory
+.vscode/
+
