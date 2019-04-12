@@ -8,13 +8,13 @@
 *                                                                                                           *
 *       Senior Developer:   Joel H                                                                          *
 *                                                                                                           *
-*		Developers:         Will W, Kelby P, Richard O, and Abdul E.                                        *
+*       Developers:         Will W, Kelby P, Richard O, and Abdul E.                                        *
 *                                                                                                           *
-*		Date Created:       3/5/2019                                                                        *
+*       Date Created:       3/5/2019                                                                        *
 *                                                                                                           *
-*		Last Modified:      4/11/2019                                                                       *
+*       Last Modified:      4/11/2019                                                                       *
 *                                                                                                           *
-*		Purpose:            To play battleship :)                                                           *
+*       Purpose:            To play battleship :)                                                           *
 *                                                                                                           *
 *************************************************************************************************************/	  
 
