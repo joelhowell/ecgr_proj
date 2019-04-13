@@ -111,7 +111,7 @@ namespace utils
                 break;
         }
 
-        cout << "\t";
+        cout << "\t ";
 
         for(char c = 'A'; c < difficulty + 65; c++)
             cout << setw(5) << c;
@@ -779,7 +779,7 @@ namespace utils
                 break;
         }
 
-        cout << "\t";
+        cout << "\t ";
 
         for(char c = 'A'; c < difficulty + 65; c++)
             cout << setw(5) << c;
