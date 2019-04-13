@@ -82,7 +82,7 @@ namespace utils
             cout << endl << endl << endl << "\t\t\t\t\t\tCongratulations " << p1 << endl << endl << endl << endl << "The game will now exit." << endl << endl;        
 
         if(hits2 == maxHits)
-            cout << endl << endl << endl << "\t\t\t\t\t\tCongratulations " << p1 << endl << endl << endl << endl << "The game will now exit." << endl << endl;        
+            cout << endl << endl << endl << "\t\t\t\t\t\tCongratulations " << p2 << endl << endl << endl << endl << "The game will now exit." << endl << endl;        
         
     }
 
@@ -839,7 +839,7 @@ namespace utils
             if((row > difficulty - 1 || row < 0) || (column > difficulty - 1 || column < 0) || coord.size() > 2)
             {
                 //cout << "Sorry commander, that's not a valid location! Try again." << endl << endl;
-                cout << "So hey, " << p << ", the board is labeled. Look at it and choose a location ON THE BOARD!" << endl;
+                cout << endl << "So hey, " << p << ", the board is labeled. Look at it and choose a location ON THE BOARD!" << endl;
             }
             else
             {
